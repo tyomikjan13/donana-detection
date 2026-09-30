@@ -1,0 +1,3 @@
+$ uv sync
+$ hf download wildintelproject/dona_24 --repo-type dataset --local-dir ./dona_24
+$ cd dona_24 && unzip camtrapdp-local.zip -d dona_24_pkg
