@@ -1,0 +1,12 @@
+# Entorno local para probar la detección en un Mac Intel (sin GPU).
+# PyTorch dejó de publicar wheels para macOS x86_64 a partir de la 2.3, por eso se fija la 2.2.2 con Python 3.12.
+torch==2.2.2
+torchvision==0.17.2
+numpy<2
+megadetector
+pandas
+pillow
+matplotlib
+ipykernel
+nbconvert
+huggingface_hub
