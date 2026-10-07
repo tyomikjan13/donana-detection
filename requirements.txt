@@ -1,0 +1,14 @@
+# Entorno con Python 3.12: PyTorch dejó de publicar wheels para macOS Intel (x86_64)
+# a partir de la 2.3, por eso se fija la 2.2.2. En Colab basta con `pip install megadetector`.
+torch==2.2.2
+torchvision==0.17.2
+numpy<2
+megadetector
+pandas
+pillow
+matplotlib
+scikit-learn
+ipykernel
+nbconvert
+huggingface_hub
+hf
