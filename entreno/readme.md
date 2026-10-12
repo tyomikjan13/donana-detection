@@ -7,3 +7,26 @@ Clases raras agrupadas: lince (5 fotos), gineta, meloncillo y caballo pasan a Ot
 Tiempo: con Faster R-CNN ResNet50 a 1024 px, cada época con el dataset triplicado tarda del orden de 25–30 min en una T4. Por eso el notebook de aumentación usa por defecto el modelo MobileNet (faster_rcnn_v3), unas cuatro veces más rápido. Cuando sepas qué aumentación funciona mejor, puedes repetirla con el modelo grande en 02_train.
 
 Las cajas de referencia son las de MegaDetector, no anotaciones a mano. Por eso el mAP mide lo bien que el modelo reproduce esas cajas; para comparar aumentaciones entre sí sigue sirviendo.
+
+# Detección de animales en Doñana (DONA_24)
+
+## Archivos
+| Archivo | Qué hace |
+|---|---|
+| `donana_data.py` | Prepara los datos: etiquetas + cajas de MegaDetector, clases, split por ráfagas, caché de imágenes |
+| `donana_det.py` | Dataset, modelos de torchvision, bucle de entrenamiento, métricas y aumentaciones de Albumentations |
+| `01_preparar_datos.ipynb` | Crea `processed/annotations_{train,valid,test}.csv` y la caché de imágenes (ejecutar 1 vez) |
+| `02_train.ipynb` | Entrena el detector (baseline, sin aumentación) |
+| `03_test.ipynb` | Evalúa en test: mAP, mAP agnóstico, AP por clase, día/noche, matriz de confusión, ejemplos |
+| `04_data_augmentation.ipynb` | Compara varias aumentaciones (mismo modelo y test) y muestra qué mejora |
+
+## Cómo usarlo en Google Colab
+1. Sube a `MyDrive/donana/` los dos `.py` y los 4 notebooks. `megadetector_animal_boxes.csv` debe estar en
+   `MyDrive/donana/processed/` (es donde lo guardó `donana_bbox_detection.ipynb`).
+2. Entorno de ejecución → GPU T4.
+3. Ejecuta en orden: `01` → `02` → `03` → `04`.
+
+Los checkpoints se guardan en `MyDrive/donana/models/`. Si Colab se desconecta, vuelve a ejecutar el notebook:
+el entrenamiento se reanuda desde `last.pt` y los experimentos de aumentación ya terminados se saltan.
+
+Requiere `albumentations>=2.0.5` (los notebooks lo instalan).
