@@ -19,7 +19,7 @@ El dataset **DONA_24** contiene observaciones de fauna silvestre capturadas entr
 
 | Nombre científico | Nombre común | Registros |
 |---|---|---|
-| *Cervidae* | Cérvido (sin especificar) | 4.618 |
+| *Cervidae* | Cérvido (ciervo/gamo) | 4.618 |
 | *Cervus elaphus* | Ciervo rojo | 4.183 |
 | *Sus scrofa* | Jabalí | 3.558 |
 | *Bos taurus* | Vaca / Toro | 2.107 |
