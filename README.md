@@ -33,32 +33,7 @@ El dataset **DONA_24** contiene observaciones de fauna silvestre capturadas entr
 | *Homo sapiens* | Humano | 55 |
 | *Herpestes ichneumon* | Meloncillo | 50 |
 | *Genetta genetta* | Gineta | 21 |
-| *Lynx pardinus* | **Lince ibérico** 🐱 | 12 |
-
-> **Nota:** 675 observaciones fueron excluidas del export público por estar vinculadas a imágenes no públicas (política de privacidad).
-
-## Estructura del repositorio
-
-```
-.
-├── README.md
-├── pyproject.toml                  ← Configuración del proyecto (Python ≥3.14, uv)
-├── instrucciones.txt               ← Pasos para descargar el dataset
-├── dona_24_exploration.ipynb       ← Notebook de exploración del dataset
-├── donana_lookup_photos.ipynb      ← Notebook de consulta de fotos
-├── donana_bbox_detection.ipynb     ← Limpieza + detección de cajas con MegaDetector (Colab)
-├── salida_megadetector/            ← Cajas detectadas (salida del notebook anterior)
-└── dona_24/                        ← Dataset DONA_24 (gitignored)
-    ├── datapackage.json            ← Metadatos CamTrap-DP
-    ├── deployments.csv             ← Despliegues de cámaras
-    ├── camtrapdp-local.zip         ← Paquete con rutas locales
-    ├── checksums-sha256.txt        ← Verificación de integridad
-    ├── images/                     ← Imágenes JPEG de las cámaras
-    └── dona_24_pkg/                ← Paquete extraído
-        ├── observations.csv        ← Observaciones (archivo principal)
-        ├── media.csv               ← Registro de medios
-        └── deployments.csv         ← Despliegues
-```
+| *Lynx pardinus* | Lince ibérico | 12 |
 
 ## Instalación y uso
 
