@@ -1,5 +1,4 @@
 # 🦌 Doñana Wildlife Detection
-
 Reconocimiento de animales y sus bounding boxes en datos de cámaras trampa del **Parque Nacional de Doñana**, procedentes del proyecto [WildINTEL](https://wildintel.eu/).
 
 ## Dataset
@@ -139,6 +138,13 @@ test_dataset = AnimalCropDataset(boxes.iloc[test_rows], transform=test_transform
 ```
 
 Hay especies con muy pocas fotos (lince 5, gineta 8, meloncillo 9). Será difícil que el modelo las aprenda; se pueden quitar o juntar en una clase "otros".
+
+## Autores
+- LIJUN ZHOU 
+- JOSE MARÍA MARTÍN RODRIGUEZ
+- ARTEM VARTANOV
+- ALEJANDRO CHENG ZHOU
+- YIXIANG JIANG
 
 ## Fuente y citación
 
